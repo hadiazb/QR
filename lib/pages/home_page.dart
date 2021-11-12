@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 // Nuestro
 import 'package:qr_app/pages/direcciones_page.dart';
 import 'package:qr_app/pages/mapas_page.dart';
+import 'package:qr_app/providers/de_provider.dart';
 import 'package:qr_app/providers/ui_provider.dart';
 import 'package:qr_app/widgets/custom_navigation.dart';
 import 'package:qr_app/widgets/scan_buttom.dart';
@@ -33,6 +34,8 @@ class _HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final uiProvider = Provider.of<UiProvider>(context);
     final currenIndex = uiProvider.selectedMenuOpt;
+
+    // DBProvider.db.database;
 
     switch (currenIndex) {
       case 0:
